@@ -1,0 +1,280 @@
+/* Genal */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  color: var(--texto);
+}
+/* CONTAINERS */
+#main-container {
+  display: flex;
+  margin-top: 30px;
+}
+#banner-container,
+#form-container {
+  flex: 1 1 0;
+  width: 50%;
+}
+/* BANNER */
+#banner-container {
+  text-align: right;
+}
+
+#banner-container img {
+  width: 100%;
+  margin-right: 15px;
+  margin-top: 25px;
+  max-width: 380px;
+}
+#form-container {
+  text-align: center;
+}
+/* Login Form */
+#form-box {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  width: 350px;
+  margin-top: 30px;
+}
+#logo-insta {
+  width: 175px;
+  height: 51px;
+  margin: 31px auto 12px;
+  background-color: #dbdbdb;
+}
+#login-form {
+  margin: 20px;
+}
+#login-form input {
+  display: block;
+  font-size: 12px;
+  padding: 12px 9px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 268px;
+  margin: 5px auto;
+}
+#login-form input[type="submit"] {
+  background-color: #3897f0;
+
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 13px;
+  padding: 0;
+}
+/* SEPARADOR */
+.separator {
+  position: relative;
+}
+.Line {
+  border-top: 1px solid #dbdbdb;
+  width: 268px;
+  margin: 25px auto 35px;
+}
+.separator span {
+  position: absolute;
+  text-transform: uppercase;
+  color: #bbb;
+  background-color: #fff;
+  top: -6px;
+  width: 50px;
+  margin-left: -25px;
+  font-size: 14px;
+  margin-top: -3px;
+}
+/* FACEBOOK LOGIN */
+#facebook-login {
+  margin-bottom: 25px;
+}
+#facebook-login a {
+  text-decoration: none;
+  color: #385185;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#facebook-login img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-top: 13px;
+}
+#facebook-login span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 13px;
+}
+/* FORGOT PASSWORD */
+#forgot-pass {
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+#forgot-pass a {
+  text-decoration: none;
+  color: #373799;
+}
+/* REGISTER CONTAINER */
+#register-container {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  width: 350px;
+  margin-top: 10px;
+  padding: 25px;
+}
+#register-container p {
+  font-size: 14px;
+  color: #262626;
+}
+#register-container a {
+  text-decoration: none;
+  color: #4a95f6;
+  font-weight: bold;
+}
+/* get app */
+#get-app-container {
+  width: 350px;
+  text-align: center;
+}
+#get-app-container p {
+  margin: 20px 0;
+  font-size: 13px;
+}
+#get-app-container img {
+  width: 136px;
+  height: 40px;
+}
+#get-app-container a {
+  text-decoration: none;
+}
+/* FOOTER */
+footer {
+  margin: auto;
+  text-align: left;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer #footer-links {
+  display: flex;
+  list-style: none;
+}
+#footer-links li {
+  margin-right: 10px;
+}
+#footer-links a,
+#copyright {
+  text-decoration: none;
+  color: #8e8e8e;
+  font-size: 12px;
+}
+#copyright {
+  margin-top: 10px;
+}
+
+/* MOBILLE */
+@media (max-width: 450px) {
+  body {
+    background-color: #fff;
+  }
+  #banner-container {
+    display: none;
+  }
+  #main-container,
+  #form-box {
+    margin-top: 0;
+  }
+  #form-box,
+  #register-container,
+  #get-app-container,
+  #form-container {
+    width: 100%;
+    border: none;
+  }
+  footer {
+    width: 90%;
+  }
+  #footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #footer-links {
+    margin-bottom: 10px;
+  }
+}
+:root {
+  --bg: #fff;
+  --texto: #111;
+  --borda: #e5e7eb;
+  --caixa: #f8fafc;
+  --acao: #2563eb;
+}
+
+[data-tema="escuro"] {
+  --bg: #0b1220;
+  --texto: #e5e7eb;
+  --borda: #1f2937;
+  --caixa: #111827;
+  --acao: #38bdf8;
+}
+.topo {
+  border-bottom: 1px solid var(--borda);
+}
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.75rem 1rem;
+}
+.topo .btn {
+  background-color: var(--acao);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.rodape {
+  border-top: 1px solid var(--borda);
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  margin-top: auto;
+}
+.btn {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--borda);
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+  color: var(--texto);
+  max-width: 200px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn.primario {
+  margin-top: 1rem;
+  background-color: var(--acao);
+  color: #fff;
+}
